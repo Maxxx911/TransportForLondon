@@ -1,33 +1,17 @@
-.App {
-  text-align: center;
+
+
+
+.App_div_block{
+  border: groove;
+  background: #eeedf2;
+  margin: 50px;
+  height: 400px;
+  padding: 20px;
+
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
-  pointer-events: none;
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.first_page{
+  background: url("image/london_first_page.jpg") center no-repeat;
+  height: 1080px;
+  background-size: cover;
 }

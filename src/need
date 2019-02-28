@@ -1,0 +1,108 @@
+//
+//   state = {
+//      dataArray: undefined,
+//      length: undefined
+//   }
+//
+//
+//   gettingBetwenZeroAndOneHungreedTransport = async (e, props) => {
+//     e.preventDefault();
+//     console.log(betwenZeroAndOneHungreed);
+//   }
+//   gettingBetwenOneHungreedAndTwoHungreed = async (e, props) => {
+//     e.preventDefault();
+//     console.log(betwenOneHungreedAndTwoHungreed);
+//   }
+//   gettingBetwenTwoHungreedAndThreeHungreed = async (e, props) => {
+//     e.preventDefault();
+//     console.log(betwenTwoHungreedAndThreeHungreed);
+//   }
+//   gettingBetwenThreeHungreedAndFourHungreed = async (e, props) => {
+//     e.preventDefault();
+//     console.log(betwenThreeHungreedAndFourHungreed);
+//   }
+//   gettingBetwenFourHungreedAndFiveHungreed = async (e, props) => {
+//     e.preventDefault();
+//     console.log(betwenFourHungreedAndFiveHungreed);
+//   }
+//   gettingBetwenFiveHungreedAndSixHungreed = async (e, props) => {
+//     e.preventDefault();
+//     console.log(betwenFiveHungreedAndSixHungreed);
+//   }
+//   gettingBetwenSixHungreedAndSevenHungreed = async (e, props) => {
+//     e.preventDefault();
+//     console.log(betwenSixHungreedAndSevenHungreed);
+//   }
+//   gettingBetwenSevenHungreedAndEightHungreed = async (e, props) => {
+//     e.preventDefault();
+//     console.log(betwenSevenHungreedAndEightHungreed);
+//   }
+//   gettingBetwenEightHungreedAndNineHungreed = async (e, props) => {
+//     e.preventDefault();
+//     console.log(betwenEightHungreedAndNineHungreed);
+//   }
+//   gettingAboveNineHungreed = async (e, props) => {
+//     e.preventDefault();
+//     console.log(aboveNineHungreed);
+//   }
+//   gettingBetwenLetterAAndLetterK  = async (e, props) => {
+//     e.preventDefault();
+//     console.log( betwenLetterAAndLetterK);
+//   }
+//   gettingBetwenLetterNAndLetterZ = async (e, props) => {
+//     e.preventDefault();
+//     console.log(betwenLetterNAndLetterZ);
+//     this.setState({
+//       dataArray: betwenLetterNAndLetterZ,
+//       length: betwenLetterNAndLetterZ.length
+//     });
+//   }
+//
+//  gettingAllTransport = async (e) => {
+//    e.preventDefault();
+//    const number = e.target.elements.num.value;
+//    //const API_URL = await
+//   // fetch(`https://api.tfl.gov.uk/line/${number}/stoppoints`);
+//    const api_bus_url = await
+//    fetch("https://api.tfl.gov.uk/line/mode/bus/status");
+//    const bus_data = await api_bus_url.json();
+//    console.log(bus_data);
+//    for(var i=0;i<bus_data.length;i++){
+//      if(bus_data[i].name < 'N' & bus_data[i].name > 'A' ) betwenLetterAAndLetterK.push(bus_data[i].name);
+//      if(bus_data[i].name < 'Z' & bus_data[i].name > 'N' ) betwenLetterNAndLetterZ.push(bus_data[i].name);
+//      if(+bus_data[i].name <= 100) betwenZeroAndOneHungreed.push(+bus_data[i].name);
+//      if(+bus_data[i].name > 100 & +bus_data[i].name <= 200 ) betwenOneHungreedAndTwoHungreed.push(+bus_data[i].name);
+//      if(+bus_data[i].name > 200 & +bus_data[i].name <= 300 ) betwenTwoHungreedAndThreeHungreed.push(+bus_data[i].name);
+//      if(+bus_data[i].name > 300 & +bus_data[i].name <= 400 ) betwenThreeHungreedAndFourHungreed.push(+bus_data[i].name);
+//      if(+bus_data[i].name > 400 & +bus_data[i].name <= 500 ) betwenFourHungreedAndFiveHungreed.push(+bus_data[i].name);
+//      if(+bus_data[i].name > 500 & +bus_data[i].name <= 600 ) betwenFiveHungreedAndSixHungreed.push(+bus_data[i].name);
+//      if(+bus_data[i].name > 600 & +bus_data[i].name <= 700 ) betwenSixHungreedAndSevenHungreed.push(+bus_data[i].name);
+//      if(+bus_data[i].name > 700 & +bus_data[i].name <= 800 ) betwenSevenHungreedAndEightHungreed.push(+bus_data[i].name);
+//      if(+bus_data[i].name > 800 & +bus_data[i].name <= 900 ) betwenEightHungreedAndNineHungreed.push(+bus_data[i].name);
+//      if(+bus_data[i].name > 900 & +bus_data[i].name <= 1000 ) aboveNineHungreed.push(+bus_data[i].name);
+//      }
+//      betwenZeroAndOneHungreed.sort(compareNumeric);
+//      betwenOneHungreedAndTwoHungreed.sort(compareNumeric);
+//      betwenTwoHungreedAndThreeHungreed.sort(compareNumeric);
+//      betwenThreeHungreedAndFourHungreed.sort(compareNumeric);
+//      betwenFourHungreedAndFiveHungreed.sort(compareNumeric);
+//      betwenFiveHungreedAndSixHungreed.sort(compareNumeric);
+//      betwenSixHungreedAndSevenHungreed.sort(compareNumeric);
+//      betwenSevenHungreedAndEightHungreed.sort(compareNumeric);
+//      betwenEightHungreedAndNineHungreed.sort(compareNumeric);
+//      aboveNineHungreed.sort(compareNumeric);
+// //ить на разные скрипты
+
+  // <BetwenZeroAndOne  btwZeroAndOne= {this.gettingBetwenZeroAndOneHungreedTransport}/>
+  // <BetwenOneAndTwo btwOneAndTwo= {this.gettingBetwenOneHungreedAndTwoHungreed} />
+  // <BetwenTwoAndThree btwTwoAndThree= {this.gettingBetwenTwoHungreedAndThreeHungreed} />
+  // <BetwenThreeAndFour btwThreeAndFour= {this.gettingBetwenThreeHungreedAndFourHungreed}/>
+  // <BetwenFourAndFive btwFourAndFive= {this.gettingBetwenFourHungreedAndFiveHungreed}/>
+  // <BetwenFiveAndSix btwFiveAndSix= {this.gettingBetwenFiveHungreedAndSixHungreed}/>
+  // <BetwenSixAndSeven  btwSixAndSeven= {this.gettingBetwenSixHungreedAndSevenHungreed} />
+  // <BetwenSevenAndEight btwSevenAndEight= {this.gettingBetwenSevenHungreedAndEightHungreed}/>
+  // <BetwenEightAndNine  btwEightAndNine= {this.gettingBetwenEightHungreedAndNineHungreed}/>
+  // <AboveNine aboveNine= {this.gettingAboveNineHungreed}/>
+  // <BetwenAAndK btwAAndK= {this.gettingBetwenLetterAAndLetterK}/>
+  // <BetwenNAndZ btwNAndZ= {this.gettingBetwenLetterNAndLetterZ}/>
+  // <Form stopMethod = {this.gettingAllTransport} />
