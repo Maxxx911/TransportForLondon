@@ -114,7 +114,6 @@ let store ={
        }else if (+bus_data[i].name>900 & +bus_data[i].name<=1000) {
          this.addBtwn901_1000(bus_data[i].name);
        }
-
      }
    },
 
@@ -122,13 +121,12 @@ let store ={
      this._reRenderTree = observer;
    },
 
-   download (){
-    const api_url = fetch("https://api.tfl.gov.uk/line/mode/bus/status").
+  async download (){
+    const api_url = await fetch("https://api.tfl.gov.uk/line/mode/bus/status").
     then(response => response.json())
     .then(data => this._sortBusNumber(data));
   }
 }
-
 
 
 
