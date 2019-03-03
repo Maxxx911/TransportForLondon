@@ -1,28 +1,30 @@
 import React from "react";
-import Info from "./component/info";
-import Form from "./component/form";
-import BusStation from "./component/busStation";
-import Header from "./component/header";
-import SharedBlockBusRoute from "./component/sharedBlockBusRoute"
-import AboveNine from "./component/listBusNumberComponents/aboveNineComponents"
-import MainComponent from "./component/mainComponent"
+import {Route, BrowserRouter} from "react-router-dom";
+import Header from "./components/Header/header";
+import Hello from "./components/HelloPage/helloPage";
+import TabsForShedule from "./components/TabsForSchedule/tabsForShedule"
+import BusStation from "./components/TabsForSchedule/ListNumbers/busStationPage/busStation"
 
-const App = () => {
+
+const App = (props) => {
+
     return (
-      <div>
-        <Header/>
-        <div className="App_div_block">
-          <div className="cover-container d-flex h-100 p-3 mx-auto flex-column">
-            <main role="main" className="inner cover">
-              <h1 className="cover-heading">Cover your page.</h1>
-              <p className="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
-              <p className="lead">
-                <a href="#" className="btn btn-lg btn-secondary">Learn more</a>
-              </p>
-            </main>
-          </div>
+      <BrowserRouter>
+        <div>
+          <Header />
+          <Route exact path="/" render = {()=> <Hello/>} />
+          <Route exact path="/timetables"
+            render = { () => <TabsForShedule state={props.state}/>   }/>
+          <Route exact path="/timetables/stoppoints/:id"
+            render = { (data)=> <BusStation
+             addStopPointMethod = {props.addStopPointMethod}
+             st={data}
+             getStopPointsMethod = {props.getStopPointsMethod}
+             clearStopPointMethod = {props.clearStopPointMethod}
+             /> }
+            />
         </div>
-      </div>
+      </BrowserRouter>
       );
   }
 export default App;
